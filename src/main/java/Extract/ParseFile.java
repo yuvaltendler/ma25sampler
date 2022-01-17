@@ -2,6 +2,7 @@ package Extract;
 
 import Extract.Parser.Parser;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ParseFile {
@@ -11,7 +12,7 @@ public class ParseFile {
         this.typeToParser = typeToFile;
     }
 
-    public String parseFile(String type, String path){
+    public ArrayList<HashMap<String, String>> parseFile(String type, String path){
         return this.typeToParser.get(type).parse(path);
     }
 }

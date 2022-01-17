@@ -4,9 +4,8 @@ import Extract.Parser.CsvParser;
 import Extract.Parser.Parser;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ParseFileTest {
 
@@ -16,7 +15,7 @@ class ParseFileTest {
             put("CSV", new CsvParser());
         }};
         ParseFile parseFile = new ParseFile(typeToParser);
-        String res = parseFile.parseFile("CSV", "src\\main\\resources\\Input\\TestMadaReport.csv");
+        ArrayList<HashMap<String, String>> res = parseFile.parseFile("CSV", "src\\main\\resources\\Input\\TestMadaReport.csv");
         assert !res.isEmpty();
     }
 }

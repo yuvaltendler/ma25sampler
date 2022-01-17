@@ -1,5 +1,8 @@
 package Extract.Parser;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public interface Parser {
-    String parse(String path);
+    ArrayList<HashMap<String, String>> parse(String path);
 }
