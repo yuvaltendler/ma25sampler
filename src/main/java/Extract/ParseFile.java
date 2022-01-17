@@ -12,6 +12,6 @@ public class ParseFile {
     }
 
     public String parseFile(String type, String path){
-        return this.typeToParser.get(type).parce(path);
+        return this.typeToParser.get(type).parse(path);
     }
 }

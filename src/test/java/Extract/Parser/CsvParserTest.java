@@ -1,15 +1,14 @@
 package Extract.Parser;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
 
 class CsvParserTest {
 
     @Test
-    void parce() {
+    void parse() {
         CsvParser csvParser = new CsvParser();
-        String json = (csvParser.parce("src\\main\\resources\\Input\\TestMadaReport.csv"));
+        String json = (csvParser.parse("src\\main\\resources\\Input\\TestMadaReport.csv"));
+//        System.out.println(json);
         assert json.equals("[{MDACODE=6b4f7c15-d9ac-43f5-be79-2e8674038910, IDNum=878746593, IDType=0, FirstName=Garfield," +
                 " LastName=Sapseed, City=Sinacaban, Street=Mockingbird, BuildingNumber=36," +
                 " Barcode=21ABBA1C-1292-5EB2-0BBA-7C4AB5DB1185, GetDate=28.04.2021, TakeDate=04.07.2021, ResultDate=23/03/2021}," +

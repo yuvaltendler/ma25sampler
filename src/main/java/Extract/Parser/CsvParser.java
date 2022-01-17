@@ -10,11 +10,7 @@ import java.util.Map;
 public class CsvParser implements Parser{
 
     @Override
-    public String parce(String path) throws FileNotFoundException {
-        //        new ObjectMapper()
-//                .configure(SerializationFeature.INDENT_OUTPUT, true)
-//                .writeValue(new File(path), orderLines.readAll());
-
+    public String parse(String path) {
         File input = new File(path);
         try {
             CsvSchema csv = CsvSchema.emptySchema().withHeader();
