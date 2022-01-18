@@ -15,7 +15,7 @@ class ParseFileTest {
             put("CSV", new CsvParser());
         }};
         ParseFile parseFile = new ParseFile(typeToParser);
-        ArrayList<HashMap<String, String>> res = parseFile.parseFile("CSV", "src\\main\\resources\\Input\\TestMadaReport.csv");
+        ArrayList<HashMap<String, String>> res = parseFile.parseFile("CSV", "src\\main\\resources\\Input\\TestMdaReport.csv");
         assert !res.isEmpty();
     }
 }

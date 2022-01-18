@@ -14,7 +14,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MadaReport {
+public class MdaReport {
     private String mdaCode;
     private Person person;
     private Address address;
@@ -24,7 +24,7 @@ public class MadaReport {
     private Date takeDate;
     private Date resultDate;
 
-    public MadaReport(HashMap<String, String> data){
+    public MdaReport(HashMap<String, String> data){
         data = fixMapKeys(data);
         this.mdaCode = data.get("mdacode");
         Name name = new Name(data.get("firstname"), data.get("lastname"));

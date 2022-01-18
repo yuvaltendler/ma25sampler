@@ -10,7 +10,7 @@ class CsvParserTest {
     @Test
     void parse() {
         CsvParser csvParser = new CsvParser();
-        ArrayList<HashMap<String, String>> data = (csvParser.parse("src\\main\\resources\\Input\\TestMadaReport.csv"));
+        ArrayList<HashMap<String, String>> data = (csvParser.parse("src\\main\\resources\\Input\\TestMdaReport.csv"));
 //        System.out.println(data);
         assert data.toString().equals("[{TakeDate=04.07.2021, GetDate=28.04.2021, FirstName=Garfield, Barcode=21ABBA1C-1292-5EB2-0BBA-7C4AB5DB1185, " +
                 "BuildingNumber=36, Street=Mockingbird, MDACODE=6b4f7c15-d9ac-43f5-be79-2e8674038910, LastName=Sapseed, " +

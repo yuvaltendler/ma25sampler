@@ -9,7 +9,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
-class MadaReportTest {
+class MdaReportTest {
 
     @Test
     void createMadaReportFromJson(){
@@ -27,14 +27,14 @@ class MadaReportTest {
             put("IDNum", "878746593");
             put("ResultDate", "23/03/2021");
         }};
-        MadaReport madaReport = new MadaReport(data);
-        assert madaReport.getMdaCode() == "6b4f7c15-d9ac-43f5-be79-2e8674038910";
-        assert madaReport.getBarcode() == "21ABBA1C-1292-5EB2-0BBA-7C4AB5DB1185";
-        assert madaReport.getGetDate().equals(new Date(2021, Calendar.MAY, 28));
-        assert madaReport.getTakeDate().equals(new Date(2021, Calendar.AUGUST, 4));
-        assert madaReport.getResultDate().equals(new Date(2021, Calendar.APRIL, 23));
-        assert madaReport.getPerson().equals(new Person(878746593, new Name("Garfield", "Sapseed")));
-        assert madaReport.getAddress().equals(new Address("Sinacaban", "Mockingbird", 36));
+        MdaReport mdaReport = new MdaReport(data);
+        assert mdaReport.getMdaCode().equals("6b4f7c15-d9ac-43f5-be79-2e8674038910");
+        assert mdaReport.getBarcode().equals("21ABBA1C-1292-5EB2-0BBA-7C4AB5DB1185");
+        assert mdaReport.getGetDate().equals(new Date(2021, Calendar.MAY, 28));
+        assert mdaReport.getTakeDate().equals(new Date(2021, Calendar.AUGUST, 4));
+        assert mdaReport.getResultDate().equals(new Date(2021, Calendar.APRIL, 23));
+        assert mdaReport.getPerson().equals(new Person(878746593, new Name("Garfield", "Sapseed")));
+        assert mdaReport.getAddress().equals(new Address("Sinacaban", "Mockingbird", 36));
 
     }
 }
