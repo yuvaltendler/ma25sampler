@@ -1,4 +1,4 @@
-package Transform.DataClass.MadaReport;
+package Transform.DataClass.MdaReport;
 
 import Transform.DataClass.DataClass;
 import Transform.DataClass.DataClassContainer;

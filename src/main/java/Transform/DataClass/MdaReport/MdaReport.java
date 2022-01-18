@@ -1,4 +1,4 @@
-package Transform.DataClass.MadaReport;
+package Transform.DataClass.MdaReport;
 
 import Transform.DataClass.BasicData.Address;
 import Transform.DataClass.BasicData.IdType;

@@ -1,7 +1,7 @@
 package Transform.DataClass.Factory.DataClassContainerFactory;
 
 import Transform.DataClass.DataClassContainer;
-import Transform.DataClass.MadaReport.MdaReports;
+import Transform.DataClass.MdaReport.MdaReports;
 
 import java.util.ArrayList;
 import java.util.HashMap;
