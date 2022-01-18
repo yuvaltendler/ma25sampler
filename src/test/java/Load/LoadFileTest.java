@@ -1,5 +1,7 @@
-package Load.FileLoader;
+package Load;
 
+import Load.FileLoader.FileLoader;
+import Load.FileLoader.JsonFileLoader;
 import Transform.DataClass.BasicData.Address;
 import Transform.DataClass.BasicData.IdType;
 import Transform.DataClass.BasicData.Name;
@@ -12,14 +14,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Scanner;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class JsonFileLoaderTest {
+class LoadFileTest {
 
     @Test
-    void load() throws FileNotFoundException {
+    void loadFile() throws FileNotFoundException {
         ArrayList<MdaReport> reports = new ArrayList<>();
         reports.add(new MdaReport("6b4f7c15-d9ac-43f5-be79-2e8674038910", new Person(878746593, new Name("Garfield", "Sapseed")),
                 new Address("Sinacaban", "Mockingbird", 36), IdType.getIdTypeByValue(0), "21ABBA1C-1292-5EB2-0BBA-7C4AB5DB1185",
@@ -29,8 +30,8 @@ class JsonFileLoaderTest {
                 new Date(2021, 9, 24), new Date(2021, 10, 31), new Date(2021, 12, 4)));
         MdaReports input = new MdaReports(reports);
 
-        JsonFileLoader jsonFileLoader = new JsonFileLoader();
-        jsonFileLoader.load("src\\main\\resources\\output\\test.json", 1, input);
+        LoadFile loadFile = new LoadFile(new HashMap<String, FileLoader>(){{put("Json", new JsonFileLoader());}});
+        loadFile.loadFile("Json", "src\\main\\resources\\output\\test.json", 1, input);
 
         File myObj = new File("src\\main\\resources\\output\\test0.json");
         Scanner myReader = new Scanner(myObj);
