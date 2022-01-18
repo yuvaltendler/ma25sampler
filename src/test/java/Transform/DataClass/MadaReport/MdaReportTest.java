@@ -12,7 +12,7 @@ import java.util.HashMap;
 class MdaReportTest {
 
     @Test
-    void createMadaReportFromJson(){
+    void createMadaReportFromHashMap(){
         HashMap<String, String> data = new HashMap<String, String>(){{
             put("TakeDate", "04.07.2021");
             put("GetDate", "28.04.2021");
