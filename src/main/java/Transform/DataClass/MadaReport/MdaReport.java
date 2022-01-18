@@ -4,6 +4,7 @@ import Transform.DataClass.BasicData.Address;
 import Transform.DataClass.BasicData.IdType;
 import Transform.DataClass.BasicData.Name;
 import Transform.DataClass.BasicData.Person;
+import Transform.DataClass.DataClass;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +15,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MdaReport {
+public class MdaReport implements DataClass {
     private String mdaCode;
     private Person person;
     private Address address;
@@ -53,5 +54,10 @@ public class MdaReport {
         int month = Integer.parseInt(string.substring(3, 5));
         int year = Integer.parseInt(string.substring(6));
         return new Date(year, month, day);
+    }
+
+    @Override
+    public String toJson() {
+        return "";
     }
 }
