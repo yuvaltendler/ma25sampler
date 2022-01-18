@@ -24,6 +24,11 @@ public class MdaReports implements DataClass, DataClassList {
     }
 
     @Override
+    public ArrayList getDataClassList() {
+        return this.mdaReports;
+    }
+
+    @Override
     public void addToList(DataClass dataClass) {
         this.mdaReports.add((MdaReport) dataClass);
     }

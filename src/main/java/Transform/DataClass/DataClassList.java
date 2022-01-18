@@ -2,7 +2,9 @@ package Transform.DataClass;
 
 import Transform.JsonConvertAble;
 
-public interface DataClassList extends JsonConvertAble {
-//    ArrayList<T extends DataClass> getList();
-    void addToList(DataClass dataClass);
+import java.util.ArrayList;
+
+public interface DataClassList<T extends DataClass> extends JsonConvertAble {
+    ArrayList<T> getDataClassList();
+    void addToList(T dataClass);
 }
