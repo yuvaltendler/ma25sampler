@@ -1,7 +1,7 @@
 package Transform.DataClass.MadaReport;
 
 import Transform.DataClass.DataClass;
-import Transform.DataClass.DataClassList;
+import Transform.DataClass.DataClassContainer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +14,7 @@ import java.util.HashMap;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MdaReports implements DataClass, DataClassList {
+public class MdaReports implements DataClass, DataClassContainer {
     private ArrayList<MdaReport> mdaReports = new ArrayList<>();
 
     public static MdaReports parseMdaReports(ArrayList<HashMap<String, String>> reports){
