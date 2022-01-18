@@ -5,6 +5,8 @@ import Transform.DataClass.DataClassList;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,6 +37,13 @@ public class MdaReports implements DataClass, DataClassList {
 
     @Override
     public String toJson() {
-        return "";
+        JSONObject jsonObject = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        for(MdaReport dataClass: this.mdaReports){
+            JSONObject dataClassObject = new JSONObject(dataClass.toJson());
+            jsonArray.put(dataClassObject);
+        }
+        jsonObject.put("mdaReports", jsonArray);
+        return jsonObject.toString();
     }
 }
