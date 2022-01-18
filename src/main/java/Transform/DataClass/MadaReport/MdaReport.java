@@ -8,6 +8,7 @@ import Transform.DataClass.DataClass;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.json.JSONObject;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -58,6 +59,19 @@ public class MdaReport implements DataClass {
 
     @Override
     public String toJson() {
-        return "";
+        JSONObject res = new JSONObject();
+        res.put("mdaCode", this.getMdaCode());
+        res.put("firstName", this.getPerson().getName().getFirstName());
+        res.put("lastName", this.getPerson().getName().getLastName());
+        res.put("idNum", this.getPerson().getIdNum());
+        res.put("city", this.getAddress().getCity());
+        res.put("street", this.getAddress().getStreet());
+        res.put("buildingNumber", this.getAddress().getBuildingNumber());
+        res.put("idType", this.getIdType().getValue());
+        res.put("barcode", this.getBarcode());
+        res.put("getDate", String.format("%s/%s/%s", this.getGetDate().getDate(), this.getGetDate().getMonth(), this.getGetDate().getYear()));
+        res.put("takeDate", String.format("%s/%s/%s", this.getTakeDate().getDate(), this.getTakeDate().getMonth(), this.getTakeDate().getYear()));
+        res.put("resultDate", String.format("%s/%s/%s", this.getResultDate().getDate(), this.getResultDate().getMonth(), this.getResultDate().getYear()));
+        return res.toString();
     }
 }
