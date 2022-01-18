@@ -1,5 +1,6 @@
 package Transform.DataClass;
 
-public interface DataClass {
-    String toJson();
+import Transform.JsonConvertAble;
+
+public interface DataClass extends JsonConvertAble {
 }
